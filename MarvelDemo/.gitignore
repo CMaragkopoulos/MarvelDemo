@@ -8,4 +8,3 @@ DerivedData/
 .netrc
 # Env file
 .env
-Env.swift
