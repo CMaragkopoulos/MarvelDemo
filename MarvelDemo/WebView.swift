@@ -1,7 +1,3 @@
-//WKWebView Integration: SwiftUI does not have a built-in web view component (WebView), like UIKit's
-//WKWebView. Therefore, to display web content in your SwiftUI app, you need to wrap WKWebView using
-//UIViewRepresentable.
-
 import SwiftUI
 import WebKit
 
