@@ -7,12 +7,12 @@ next character of your preference. Last but not least, by clicking on a comic
 which interests you, directs you to its detailed web page. 
 
 ## Screenshots
-
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
-![Screenshot 4](screenshots/screenshot4.png)
-
+<p float="left">
+  <img src="screenshots/screenshot1.png" alt="Screenshot 1" width="200"/>
+  <img src="screenshots/screenshot2.png" alt="Screenshot 2" width="200"/>
+  <img src="screenshots/screenshot3.png" alt="Screenshot 3" width="200"/>
+  <img src="screenshots/screenshot4.png" alt="Screenshot 4" width="200"/>
+</p>
 
 ## Setup Instructions
 
@@ -23,8 +23,10 @@ which interests you, directs you to its detailed web page.
 2. **Environment Variables:**
    - Create a .env file in the root directory of the project.
    - Add your Marvel API keys to the .env file:
-    PUBLIC_KEY=your_public_key
-    PRIVATE_KEY=your_private_key
+     ```plaintext
+     PUBLIC_KEY=your_public_key
+     PRIVATE_KEY=your_private_key
+     ```
    - Note: Currently, the project uses keys directly in Env.swift ,due to issues with .env file setup, so you can just use your keys there. This can be revisited as a future improvement (TODO).
 
 3. **Open in Xcode:**
@@ -46,18 +48,25 @@ which interests you, directs you to its detailed web page.
 
 ## Folder Structure
 
-MarvelDemo/
-├── MarvelDemo/
-│ ├── ContentView.swift
-│ ├── DetailView.swift
-│ ├── ComicDetailView.swift
-│ ├── MarvelAPI.swift
-│ ├── WebView.swift
-│ ├── MarvelModel.swift
-│ └── Env.swift
-├── MarvelDemo.xcodeproj
-└── README.md
-
+📂 MarvelDemo/
+├── 📂 MarvelDemo/
+│   ├── 📂 Assets.xcassets/
+│   ├── 📂 Preview Content/
+│   │   ├── 📂 Preview Assets/
+│   ├── 📄 ContentView.swift
+│   ├── 📄 DetailView.swift
+│   ├── 📄 ComicDetailView.swift
+│   ├── 📄 MarvelAPI.swift
+│   ├── 📄 WebView.swift
+│   ├── 📄 MarvelModel.swift
+│   └── 📄 Env.swift
+├── 📂 screenshots/
+│   ├── 📄 screenshot1.png
+│   ├── 📄 screenshot2.png
+│   ├── 📄 screenshot3.png
+│   ├── 📄 screenshot4.png
+├── 📂 MarvelDemo.xcodeproj
+└── 📄 README.md
 
 ## Development Environment
 
