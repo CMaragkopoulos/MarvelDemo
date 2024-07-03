@@ -48,25 +48,25 @@ which interests you, directs you to its detailed web page.
 
 ## Folder Structure
 
-- 📂 MarvelDemo/
-    - 📁 MarvelDemo/
-      - 📁 Assets.xcassets/
-      - 📁 Preview Content/
-        - 📁 Preview Assets/
-      - 📄 ContentView.swift
-      - 📄 DetailView.swift
-      - 📄 ComicDetailView.swift
-      - 📄 MarvelAPI.swift
-      - 📄 WebView.swift
-      - 📄 MarvelModel.swift
-      - 📄 Env.swift
-    - 📁 screenshots/
-        - 📄 screenshot1.png
-        - 📄 screenshot2.png
-        - 📄 screenshot3.png
-        - 📄 screenshot4.png
-    - 📄 MarvelDemo.xcodeproj
-    - 📄 README.md
+- 📁 MarvelDemo/
+  - 📁 MarvelDemo/
+    - 📁 Assets.xcassets/
+    - 📁 Preview Content/
+      - 📁 Preview Assets/
+    - 📄 ContentView.swift
+    - 📄 DetailView.swift
+    - 📄 ComicDetailView.swift
+    - 📄 MarvelAPI.swift
+    - 📄 WebView.swift
+    - 📄 MarvelModel.swift
+    - 📄 Env.swift
+  - 📁 screenshots/
+    - 📄 screenshot1.png
+    - 📄 screenshot2.png
+    - 📄 screenshot3.png
+    - 📄 screenshot4.png
+  - 📄 MarvelDemo.xcodeproj
+  - 📄 README.md
 
 ## Development Environment
 
