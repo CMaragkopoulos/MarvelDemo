@@ -1,10 +1,6 @@
 # MarvelDemo
 
-MarvelDemo is a project showcasing Marvel characters with their images and their 
-names using the Marvel API. When you click on any character, you can view their
-list of comics in a carousel form, feel free to swipe to see the previous or the 
-next character of your preference. Last but not least, by clicking on a comic
-which interests you, directs you to its detailed web page. 
+MarvelDemo is a project showcasing Marvel characters with their images and their names using the Marvel API. When you click on any character, you can view their list of comics in a carousel form. Feel free to swipe to see the previous or the next character of your preference. Last but not least, clicking on a comic that interests you directs you to its detailed web page.
 
 ## Screenshots
 <p float="left">
@@ -20,19 +16,39 @@ which interests you, directs you to its detailed web page.
    - Go to [Marvel Developer Portal](https://developer.marvel.com/) and create an account.
    - Obtain your public and private keys.
 
-2. **Environment Variables:**
-   - Create a .env file in the root directory of the project.
-   - Add your Marvel API keys to the .env file:
+2. **Configuration:**
+   - Create a `Config.xcconfig` file in the root directory of the project.
+   - Add your Marvel API keys to the `Config.xcconfig` file:
      ```plaintext
-     PUBLIC_KEY=your_public_key
-     PRIVATE_KEY=your_private_key
+     API_PUBLIC_KEY = your_public_key
+     API_PRIVATE_KEY = your_private_key
      ```
-   - Note: Currently, the project uses keys directly in Env.swift ,due to issues with .env file setup, so you can just use your keys there. This can be revisited as a future improvement (TODO).
 
-3. **Open in Xcode:**
+3. **Add Configurations to Xcode:**
+   - Open your project in Xcode.
+   - Select your project in the Project Navigator.
+   - Go to the "Info" tab and add your `Config.xcconfig` file to both Debug and Release configurations.
+
+4. **Update `Info.plist`:**
+   - Ensure your `Info.plist` includes placeholders for the API keys:
+     ```xml
+     <key>API_PUBLIC_KEY</key>
+     <string>$(API_PUBLIC_KEY)</string>
+     <key>API_PRIVATE_KEY</key>
+     <string>$(API_PRIVATE_KEY)</string>
+     ```
+
+5. **Set Correct Path to `Info.plist`:**
+   - In Xcode, select the project in the Project Navigator.
+   - Select the **MarvelDemo** target.
+   - Go to the **Build Settings** tab.
+   - Search for **Info.plist File** under the **Packaging** section.
+   - Ensure the path is set to `MarvelDemo/Info.plist`.
+
+6. **Open in Xcode:**
    - Open the project in Xcode.
 
-4. **Run the Project:**
+7. **Run the Project:**
    - Build and run the project.
 
 ## Project Structure
@@ -44,7 +60,7 @@ which interests you, directs you to its detailed web page.
 - **MarvelAPI:** Handles API requests to fetch characters and comics.
 - **WebView:** Wraps WKWebView for displaying web content.
 - **MarvelModel:** Data models for characters and comics.
-- **Env:** Holds static API keys (TODO: Integrate with `.env` file).
+- **Environment:** Holds static API keys retrieved from the Config.xcconfig file.
 
 ## Folder Structure
 
@@ -59,7 +75,9 @@ which interests you, directs you to its detailed web page.
     - 📄 MarvelAPI.swift
     - 📄 WebView.swift
     - 📄 MarvelModel.swift
-    - 📄 Env.swift
+    - 📄 Environment.swift
+    - 📄 Info.plist
+    - 📄 Config.xcconfig (to be created by the user)
   - 📁 screenshots/
     - 📄 screenshot1.png
     - 📄 screenshot2.png
@@ -77,3 +95,5 @@ which interests you, directs you to its detailed web page.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+

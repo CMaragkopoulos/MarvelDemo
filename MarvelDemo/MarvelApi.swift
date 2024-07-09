@@ -8,8 +8,8 @@ class MarvelAPI {
     
     init() {
         // Initialize the keys when the MarvelAPI instance is created
-        self.publicKey = Env.marvelPublicKey
-        self.privateKey = Env.marvelPrivateKey
+        self.publicKey = Environment.apiPublicKey
+        self.privateKey = Environment.apiPrivateKey
     }
     
     func fetchCharacters(offset: Int, completion: @escaping ([Character]) -> Void) {
@@ -25,11 +25,6 @@ class MarvelAPI {
                 print("Error fetching characters:", error ?? "Unknown error")
                 return
             }
-            
-//             Debugging: Print the raw JSON response data
-//            if let jsonString = String(data: data, encoding: .utf8) {
-//                print("Raw JSON response:", jsonString)
-//            }
             
             do {
                 let result = try JSONDecoder().decode(CharacterDataWrapper.self, from: data)

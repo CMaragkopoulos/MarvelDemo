@@ -12,8 +12,7 @@
 		AE56BD502C0B5D5900604262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE56BD4F2C0B5D5900604262 /* Assets.xcassets */; };
 		AE56BD532C0B5D5900604262 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE56BD522C0B5D5900604262 /* Preview Assets.xcassets */; };
 		AEB30DCE2C34EAB80016257B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEB30DCD2C34EAB80016257B /* .gitignore */; };
-		AEB30DD02C34EABF0016257B /* .env in Resources */ = {isa = PBXBuildFile; fileRef = AEB30DCF2C34EABF0016257B /* .env */; };
-		AEB30DD22C34EADC0016257B /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB30DD12C34EADC0016257B /* Env.swift */; };
+		AEB30E072C3DED800016257B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB30E062C3DED800016257B /* Environment.swift */; };
 		AEC5BFDA2C31C71C00E6601F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5BFD92C31C71C00E6601F /* DetailView.swift */; };
 		AEC5BFDC2C31C75500E6601F /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5BFDB2C31C75500E6601F /* ComicDetailView.swift */; };
 		AEC5BFDE2C31C77A00E6601F /* MarvelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5BFDD2C31C77A00E6601F /* MarvelApi.swift */; };
@@ -28,8 +27,9 @@
 		AE56BD4F2C0B5D5900604262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE56BD522C0B5D5900604262 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEB30DCD2C34EAB80016257B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		AEB30DCF2C34EABF0016257B /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
-		AEB30DD12C34EADC0016257B /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		AEB30E032C3DED2E0016257B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		AEB30E062C3DED800016257B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AEB30E082C3DEE980016257B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AEC5BFD92C31C71C00E6601F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AEC5BFDB2C31C75500E6601F /* ComicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailView.swift; sourceTree = "<group>"; };
 		AEC5BFDD2C31C77A00E6601F /* MarvelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApi.swift; sourceTree = "<group>"; };
@@ -74,8 +74,9 @@
 				AEC5BFDD2C31C77A00E6601F /* MarvelApi.swift */,
 				AEC5BFE12C31C7D600E6601F /* WebView.swift */,
 				AEC5BFDF2C31C79A00E6601F /* MarvelModel.swift */,
-				AEB30DD12C34EADC0016257B /* Env.swift */,
-				AEB30DCF2C34EABF0016257B /* .env */,
+				AEB30E062C3DED800016257B /* Environment.swift */,
+				AEB30E082C3DEE980016257B /* Info.plist */,
+				AEB30E032C3DED2E0016257B /* Config.xcconfig */,
 				AEB30DCD2C34EAB80016257B /* .gitignore */,
 				AE56BD4F2C0B5D5900604262 /* Assets.xcassets */,
 				AE56BD512C0B5D5900604262 /* Preview Content */,
@@ -152,7 +153,6 @@
 				AE56BD532C0B5D5900604262 /* Preview Assets.xcassets in Resources */,
 				AEB30DCE2C34EAB80016257B /* .gitignore in Resources */,
 				AE56BD502C0B5D5900604262 /* Assets.xcassets in Resources */,
-				AEB30DD02C34EABF0016257B /* .env in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,11 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE56BD4E2C0B5D5900604262 /* ContentView.swift in Sources */,
+				AEB30E072C3DED800016257B /* Environment.swift in Sources */,
 				AEC5BFE02C31C79A00E6601F /* MarvelModel.swift in Sources */,
 				AEC5BFDA2C31C71C00E6601F /* DetailView.swift in Sources */,
 				AE56BD4C2C0B5D5900604262 /* MarvelDemoApp.swift in Sources */,
 				AEC5BFDE2C31C77A00E6601F /* MarvelApi.swift in Sources */,
-				AEB30DD22C34EADC0016257B /* Env.swift in Sources */,
 				AEC5BFDC2C31C75500E6601F /* ComicDetailView.swift in Sources */,
 				AEC5BFE22C31C7D600E6601F /* WebView.swift in Sources */,
 			);
@@ -179,6 +179,7 @@
 /* Begin XCBuildConfiguration section */
 		AE56BD542C0B5D5900604262 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB30E032C3DED2E0016257B /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -242,6 +243,7 @@
 		};
 		AE56BD552C0B5D5900604262 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB30E032C3DED2E0016257B /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -298,6 +300,7 @@
 		};
 		AE56BD572C0B5D5900604262 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB30E032C3DED2E0016257B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +309,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = /Users/inverzio/Desktop/MarvelDemo/MarvelDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -326,6 +330,7 @@
 		};
 		AE56BD582C0B5D5900604262 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB30E032C3DED2E0016257B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +339,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = /Users/inverzio/Desktop/MarvelDemo/MarvelDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
